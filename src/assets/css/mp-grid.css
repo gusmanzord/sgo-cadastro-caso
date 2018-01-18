@@ -1,0 +1,51 @@
+.mp-row{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    margin:0;
+    padding:0 0px;
+}
+ .mp-col-1, .mp-col-2, .mp-col-3, .mp-col-4, .mp-col-5, .mp-col-6, .mp-col-7, .mp-col-8, .mp-col-9, .mp-col-10, .mp-col-11, .mp-col-12{
+    padding:7px;
+} 
+.mp-col{
+    flex:1;
+    padding:7px;
+}
+.mp-col-1{
+    width:8.333333333333333%;
+}
+.mp-col-2{
+    width:16.66666666666667%;
+}
+.mp-col-3{
+    width:25%;
+}
+.mp-col-4{
+    width:33.33333333333333%
+}
+.mp-col-5{
+    width:41.66666666666667%;
+}
+.mp-col-6{
+    width:50%;
+}
+.mp-col-7{
+    width:58.33333333333333%;
+}
+.mp-col-8{
+    width:66.66666666666667%;
+}
+.mp-col-9{
+    width:75%;
+}
+.mp-col-10{
+    width:83.33333333333334%;
+}
+.mp-col-11{
+    width:90.90909090909091%;
+}
+.mp-col-12{
+    width:100%;
+}
+

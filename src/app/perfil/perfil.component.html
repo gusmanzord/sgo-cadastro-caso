@@ -1,0 +1,20 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>
+    more_vert
+  </mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>
+      account_circle
+    </mat-icon>
+    <span>Perfil</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>
+      notifications
+    </mat-icon>
+    <span>Notificações</span>
+  </button>
+</mat-menu>
+

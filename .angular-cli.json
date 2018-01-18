@@ -19,7 +19,13 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "assets/css/mp-main.css",
+        "assets/css/mp-login.css",
+        "assets/css/menu.css",
+        "assets/css/mp-grid.css",
+        "assets/css/mp-material.css",
+        "assets/css/mp-animate.css",
+        "assets/css/material-icons.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

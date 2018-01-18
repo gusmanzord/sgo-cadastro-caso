@@ -1,0 +1,34 @@
+
+/* Menu  */
+app-menu{
+    flex:13;
+    background:rgba(0, 0, 0, 0.1);
+}
+app-menu .mat-expansion-panel{
+    background:#2e3a48;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+app-menu .mat-expansion-panel, .mat-expansion-panel-header-title{
+    color:#b0bec5 !important;
+}
+app-menu .mat-expansion-indicator::after{
+    color:#607d8b!important;
+}
+app-menu .mat-expansion-panel-spacing{
+    margin:0 !important;
+}
+app-menu .mat-expansion-panel-body{
+    padding:0px !important;
+    background:rgba(0, 0, 0, 0.3);
+}
+app-menu .mat-expansion-panel-body a{
+    text-decoration:none;
+    color:#607d8b;
+    display:block;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
+    padding:7px 7px 7px 7px;
+    border-bottom: 1px solid #263238;
+}
+

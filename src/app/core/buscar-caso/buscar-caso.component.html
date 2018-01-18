@@ -1,0 +1,74 @@
+<div class="mp-header">
+  <mat-icon>
+      search
+  </mat-icon>
+    Buscar Caso
+    <ul class="breadcrumb">
+    <li>
+      <a href="">
+        Home
+      </a>
+    </li>
+    <li>
+      Buscar Caso
+    </li>
+  </ul>
+</div>
+<div class="mp-content">
+  <div class="mp-row">
+    <div class="mp-col-6">
+      <mat-form-field>
+        <input matInput placeholder="Título" type="text">
+      </mat-form-field>
+    </div>
+    <div class="mp-col-6">
+      <mat-form-field>
+        <input matInput placeholder="Tema" type="text">
+      </mat-form-field>
+    </div>
+    
+  </div>
+  <div class="mp-row">
+    <div class="mp-col-4">
+      <mat-form-field>
+        <input matInput placeholder="Atribuição" type="text">
+      </mat-form-field>
+    </div>
+    <div class="mp-col-1">
+      <mat-slide-toggle>Vigente</mat-slide-toggle>
+    </div>
+    <div class="mp-col-1">
+      <mat-slide-toggle>Aprovados</mat-slide-toggle>
+    </div>
+    <div class="mp-col-4">
+      <mat-form-field>
+        <mat-select placeholder="Cidade" [(value)]="selected" required>
+          <mat-option>Selecione uma cidade</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="mp-col-4">
+      <mat-form-field>
+        <mat-select placeholder="Bairro" [(value)]="selected" required>
+          <mat-option>Selecione uma bairro</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="mp-row">
+    <div class="mp-col-12">
+      <button mat-raised-button color="success">
+        <mat-icon>
+          search
+        </mat-icon>
+        Buscar caso
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+app-login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(207,216,220, 0.9);
+    z-index: 99999;
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+mat-card.login-content {
+    width: 360px;
+    margin: 0 auto;
+    padding:42px;
+    transform:translate(0, 160px);
+    animation-name:loginContentAnimate;
+    animation-duration:1s;
+    background: rgba(54,67,84, 0.1) !important;
+    border-radius:0;
+}
+@keyframes loginContentAnimate{
+    0%{
+        transform:translate(0, 0);
+        opacity:0;
+    }
+    100%{
+        transform:translate(0, 160px);
+        opacity:1;
+    }
+}
+mat-card.login-content mat-card-header{
+    padding:0;
+}
+mat-card.login-content mat-card-header h4{
+    text-align: center;
+    padding: 0;
+    margin:0;
+    display: block;
+    width: 100%;
+    font-weight: 100;
+    font-size: 2.4em;
+    color:rgba(54,67,84, 1) !important;
+    font-family: 'Roboto', sans-serif;
+}
