@@ -40,9 +40,17 @@ mat-sidenav-content::-webkit-scrollbar-thumb{
 .mat-slide-toggle{
     margin-top:21px;
 }
-.mat-card-content h5{
+.mat-card h4{
+    font-size:0.65em !important;
+}
+.mat-card h4, .mat-card-content h5{
     padding:0;
     margin:0;
+}
+.mat-card-content p, .mat-card h4{
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
 }
 .mat-tab-header-pagination{
     background:rgba(54,67,84, 0.8);
@@ -56,4 +64,20 @@ mat-sidenav-content::-webkit-scrollbar-thumb{
 .mat-fab.mat-success, .mat-mini-fab.mat-success, .mat-raised-button.mat-success{
     background:#43a047;
     color:#fafafa;
+}
+.mat-fab.mat-cancel, .mat-mini-fab.mat-cancel, .mat-raised-button.mat-cancel {
+    background:#f4511e;
+    color:#fafafa;
+}
+.mat-fab.mat-clean, .mat-mini-fab.mat-clean, .mat-raised-button.mat-clean {
+    background:#039be5;
+    color:#fafafa;
+}
+
+.mat-list .mat-list-item .mat-list-item-content{
+    padding:0 !important;
+    box-shadow:1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.author .mat-chip, .news .mat-chip{
+    padding: 0 14px !important;
 }

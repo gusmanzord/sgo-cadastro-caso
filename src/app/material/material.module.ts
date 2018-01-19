@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   MatButtonModule,
   MatMenuModule,
@@ -17,7 +18,8 @@ import {
   MatChipsModule,
   MatTooltipModule,
   MatDatepickerModule,
-  MatTabsModule
+  MatTabsModule,
+  MatNativeDateModule
 } from '@angular/material';
 
 
@@ -40,7 +42,10 @@ import {
     MatChipsModule,
     MatTooltipModule,
     MatDatepickerModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatNativeDateModule
   ],
   exports: [
     MatButtonModule,
@@ -60,7 +65,8 @@ import {
     MatChipsModule,
     MatTooltipModule,
     MatDatepickerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatNativeDateModule
   ]
 })
 export class MaterialModule { }

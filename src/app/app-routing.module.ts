@@ -2,11 +2,17 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { BuscarCasoComponent } from './core/buscar-caso/buscar-caso.component';
+import { CriarCasoComponent } from './core/criar-caso/criar-caso.component';
+import { DetalharCasoComponent } from './core/detalhar-caso/detalhar-caso.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'buscar-caso', component: BuscarCasoComponent },
+  { path: 'criar-caso', component: CriarCasoComponent },
+  { path: 'detalhar-caso', component: DetalharCasoComponent },
   { path: '**', redirectTo: '' }
 ];
 

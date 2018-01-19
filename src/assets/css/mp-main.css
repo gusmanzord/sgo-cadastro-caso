@@ -18,6 +18,7 @@ main{
     padding-top:64px;
     display:flex;
     flex-direction:column;
+    overflow-x:none !important;
 }
 app-name{
     flex:1;
@@ -129,6 +130,21 @@ h1{
     text-align: center;
 }
 
+.mp-status{
+    padding:14px !important;
+    background:rgba(207,216,220, 0.9) !important;
+    color:rgba(255, 255, 255, 1) !important;
+    font-weight:300 !important;
+}
+.mp-status-draft{
+    background:#f4511e !important;
+}
+.mp-status-publish{
+    background:#3949ab !important;
+}
+.mp-status-approved{
+    background:#43a047 !important;
+}
 /* Fontes */
 .fs5_4{
     font-size:5.4em;

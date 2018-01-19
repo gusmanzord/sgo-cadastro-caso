@@ -14,6 +14,7 @@ import { AppnameComponent } from './appname/appname.component';
 import { MenuComponent } from './menu/menu.component';
 import { LogoComponent } from './logo/logo.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { CriarCasoComponent } from './core/criar-caso/criar-caso.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { PerfilComponent } from './perfil/perfil.component';
     MenuComponent,
     LogoComponent,
     PerfilComponent,
+    CriarCasoComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { PerfilComponent } from './perfil/perfil.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
 
 
 

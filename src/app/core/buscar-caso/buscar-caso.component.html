@@ -16,28 +16,37 @@
 </div>
 <div class="mp-content">
   <div class="mp-row">
-    <div class="mp-col-6">
+    <div class="mp-col-4">
       <mat-form-field>
         <input matInput placeholder="Título" type="text">
       </mat-form-field>
     </div>
-    <div class="mp-col-6">
-      <mat-form-field>
-        <input matInput placeholder="Tema" type="text">
-      </mat-form-field>
-    </div>
-    
-  </div>
-  <div class="mp-row">
     <div class="mp-col-4">
       <mat-form-field>
-        <input matInput placeholder="Atribuição" type="text">
+        <mat-select placeholder="Tema" [(value)]="selected" required>
+          <mat-option>Selecione um tema</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
-    <div class="mp-col-1">
+    <div class="mp-col-4">
+      <mat-form-field>
+        <mat-select placeholder="Atribuição" [(value)]="selected" required>
+          <mat-option>Selecione uma atribuição</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="mp-row">
+    <div class="mp-col-2">
       <mat-slide-toggle>Vigente</mat-slide-toggle>
     </div>
-    <div class="mp-col-1">
+    <div class="mp-col-2">
       <mat-slide-toggle>Aprovados</mat-slide-toggle>
     </div>
     <div class="mp-col-4">
@@ -63,12 +72,143 @@
   </div>
   <div class="mp-row">
     <div class="mp-col-12">
+      <button routerLink="/criar-caso" mat-raised-button color="">
+        <mat-icon>
+          plus_one
+        </mat-icon>
+        Criar caso
+      </button>
       <button mat-raised-button color="success">
         <mat-icon>
           search
         </mat-icon>
         Buscar caso
       </button>
+    </div>
+  </div>
+  <div class="mp-row">
+    <div class="mp-col-4">
+    <mat-card>
+      <mat-card-title>
+        <h4 class="mp-status mp-status-draft">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad lauda
+        </h4>          
+      </mat-card-title>
+      <mat-card-content>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudan.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button  matTooltip="Publicar" mat-mini-fab color="basic">
+          <mat-icon>
+            publish
+          </mat-icon>
+        </button>
+        <button  matTooltip="Aprovar" mat-mini-fab color="basic">
+          <mat-icon>
+            spellcheck
+          </mat-icon>
+        </button>
+        <button  matTooltip="Promover" mat-mini-fab color="basic">
+          <mat-icon>
+            star_rate
+          </mat-icon>
+        </button>
+        <button  matTooltip="Detalhar" mat-mini-fab color="basic">
+          <mat-icon>
+            find_in_page
+          </mat-icon>
+        </button>
+        <button  matTooltip="Editar" mat-mini-fab color="basic">
+          <mat-icon>
+            create
+          </mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
+      <div class="mp-col-4">
+    <mat-card>
+      <mat-card-title>
+        <h4 class="mp-status mp-status-approved">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad lauda
+        </h4>          
+      </mat-card-title>
+      <mat-card-content>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudan.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button  matTooltip="Publicar" mat-mini-fab color="basic">
+          <mat-icon>
+            publish
+          </mat-icon>
+        </button>
+        <button  matTooltip="Aprovar" mat-mini-fab color="basic">
+          <mat-icon>
+            spellcheck
+          </mat-icon>
+        </button>
+        <button  matTooltip="Promover" mat-mini-fab color="basic">
+          <mat-icon>
+            star_rate
+          </mat-icon>
+        </button>
+        <button routerLink="/detalhar-caso"  matTooltip="Detalhar" mat-mini-fab color="basic">
+          <mat-icon>
+            find_in_page
+          </mat-icon>
+        </button>
+        <button  matTooltip="Editar" mat-mini-fab color="basic">
+          <mat-icon>
+            create
+          </mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
+      <div class="mp-col-4">
+    <mat-card>
+      <mat-card-title>
+        <h4 class="mp-status mp-status-publish">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad lauda
+        </h4>          
+      </mat-card-title>
+      <mat-card-content>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudantium doloribus labore ipsum tenetur dolores iure rem, quisquam repudiandae quam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus voluptatibus illum, assumenda nobis ex excepturi, accusamus eveniet eos ad laudan.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button  matTooltip="Publicar" mat-mini-fab color="basic">
+          <mat-icon>
+            publish
+          </mat-icon>
+        </button>
+        <button  matTooltip="Aprovar" mat-mini-fab color="basic">
+          <mat-icon>
+            spellcheck
+          </mat-icon>
+        </button>
+        <button  matTooltip="Promover" mat-mini-fab color="basic">
+          <mat-icon>
+            star_rate
+          </mat-icon>
+        </button>
+        <button  matTooltip="Detalhar" mat-mini-fab color="basic">
+          <mat-icon>
+            find_in_page
+          </mat-icon>
+        </button>
+        <button  matTooltip="Editar" mat-mini-fab color="basic">
+          <mat-icon>
+            create
+          </mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
     </div>
   </div>
 </div>
