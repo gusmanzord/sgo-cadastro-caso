@@ -6,6 +6,7 @@ import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { BuscarCasoComponent } from './core/buscar-caso/buscar-caso.component';
 import { CriarCasoComponent } from './core/criar-caso/criar-caso.component';
 import { DetalharCasoComponent } from './core/detalhar-caso/detalhar-caso.component';
+import { EditarCasoComponent } from './core/editar-caso/editar-caso.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
   { path: 'buscar-caso', component: BuscarCasoComponent },
   { path: 'criar-caso', component: CriarCasoComponent },
   { path: 'detalhar-caso', component: DetalharCasoComponent },
+  { path: 'editar-caso', component: EditarCasoComponent },
   { path: '**', redirectTo: '' }
 ];
 

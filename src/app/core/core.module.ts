@@ -3,12 +3,14 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DetalharCasoComponent } from './detalhar-caso/detalhar-caso.component';
+import { EditarCasoComponent } from './editar-caso/editar-caso.component';
 
 
 @NgModule({
   declarations: [
   DashboardComponent,
-  DetalharCasoComponent],
+  DetalharCasoComponent,
+  EditarCasoComponent],
 
   imports: [
     RouterModule,

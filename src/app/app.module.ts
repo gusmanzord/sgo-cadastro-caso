@@ -25,7 +25,7 @@ import { CriarCasoComponent } from './core/criar-caso/criar-caso.component';
     MenuComponent,
     LogoComponent,
     PerfilComponent,
-    CriarCasoComponent,
+    CriarCasoComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +40,13 @@ import { CriarCasoComponent } from './core/criar-caso/criar-caso.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+
+
+
+
 
 
 

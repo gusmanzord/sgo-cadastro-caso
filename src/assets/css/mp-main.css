@@ -136,23 +136,34 @@ h1{
     color:rgba(255, 255, 255, 1) !important;
     font-weight:300 !important;
 }
-.mp-status-draft{
+.mat-card-draft, .mp-status-draft{
     background:#f4511e !important;
+    color:#fafafa;
 }
-.mp-status-publish{
+.mat-card-publish, .mp-status-publish{
     background:#3949ab !important;
+    color:#fafafa;
 }
-.mp-status-approved{
+.mat-card-approved, .mp-status-approved{
     background:#43a047 !important;
+    color:#fafafa;
 }
 /* Fontes */
+.fs3{
+    font-size:3em;
+}
 .fs5_4{
-    font-size:5.4em;
+    font-size:5.4em !important;
+}
+.fs8_4{
+    font-size:8.4em !important;
 }
 .text-center{
-    text-align:center;
+    text-align:center !important;
 }
-
+.text-right{
+    text-align:right !important;
+}
 .text-light{
     font-weight:100;
 }
