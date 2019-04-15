@@ -19,6 +19,7 @@ import {
   MatTooltipModule,
   MatDatepickerModule,
   MatTabsModule,
+  MatTableModule,
   MatNativeDateModule
 } from '@angular/material';
 
@@ -44,6 +45,7 @@ import {
     MatDatepickerModule,
     MatTabsModule,
     FormsModule,
+    MatTableModule,
     ReactiveFormsModule,
     MatNativeDateModule
   ],
@@ -66,8 +68,17 @@ import {
     MatTooltipModule,
     MatDatepickerModule,
     MatTabsModule,
+    MatTableModule,
     MatNativeDateModule
   ]
 })
 export class MaterialModule { }
+
+
+
+
+
+
+
+
 

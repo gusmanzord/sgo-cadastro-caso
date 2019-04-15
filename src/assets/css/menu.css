@@ -31,4 +31,7 @@ app-menu .mat-expansion-panel-body a{
     padding:7px 7px 7px 7px;
     border-bottom: 1px solid #263238;
 }
+app-menu .mat-expansion-panel-body i {
+    font-size: 2.2em;
+}
 

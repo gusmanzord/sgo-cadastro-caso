@@ -13,16 +13,17 @@ html, body{
 }
 main{
     width:100%;
-    height:92%;
     margin:0;
-    padding-top:64px;
+    flex:1;
     display:flex;
     flex-direction:column;
     overflow-x:none !important;
+    background:#cfd8dc;
 }
 app-name{
     flex:1;
     background:rgba(0, 0, 0, 0.2);
+    max-height: 100px;
 }
 app-name h2{
     margin:auto;
@@ -39,6 +40,30 @@ app-name h2{
 app-name h2 small{
     font-size:0.4em;
 }
+app-name i {
+    font-size: 14em !important;
+    margin:0 auto;
+    padding:5px;
+    max-width:220px;
+    text-align:center;
+    color:#fafafa;
+    text-decoration:none;
+    line-height: 0.5em !important;
+	text-shadow:
+    0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+	/* background:url("../images/logo-mprj-nova.png") center center no-repeat; */
+}
 h1{
     font-size:2.5em !important;
     color:#fff;
@@ -51,7 +76,6 @@ h1{
 .mp-header{
     flex:1;
     padding:7px 23px;
-    background:#eceff1;
     font-size:1.3em;
     font-weight:100 !important;
     animation-name:headerAnimate;
@@ -177,11 +201,28 @@ h1{
     margin:0;
 }
 
+app-criar-caso, app-cadastro-tag{
+    flex:1;
+}
 
-
-
-
-
+.tabela-basica{
+    width: 100%;
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.2);
+    padding:0;
+    
+}
+.tabela-basica thead{
+    background:rgb(207, 216, 220);
+    
+}
+.tabela-basica tr{
+    text-align: center;
+    padding: 7px;
+    height: 28px;
+}
+.tabela-basica tr:nth-child(even){
+    background: rgba(0,0,0,0.1);
+}
 
 
 

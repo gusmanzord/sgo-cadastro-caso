@@ -1,7 +1,5 @@
 <div class="mp-header">
-  <mat-icon>
-      search
-  </mat-icon>
+  <i class="icon icon-consulta"></i>
     Buscar Caso
     <ul class="breadcrumb">
     <li>
@@ -16,12 +14,12 @@
 </div>
 <div class="mp-content">
   <div class="mp-row">
-    <div class="mp-col-4">
+    <div class="mp-col-3">
       <mat-form-field>
         <input matInput placeholder="Título" type="text">
       </mat-form-field>
     </div>
-    <div class="mp-col-4">
+    <div class="mp-col-2">
       <mat-form-field>
         <mat-select placeholder="Tema" [(value)]="selected" required>
           <mat-option>Selecione um tema</mat-option>
@@ -31,7 +29,7 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="mp-col-4">
+    <div class="mp-col-2">
       <mat-form-field>
         <mat-select placeholder="Atribuição" [(value)]="selected" required>
           <mat-option>Selecione uma atribuição</mat-option>
@@ -41,49 +39,93 @@
         </mat-select>
       </mat-form-field>
     </div>
-  </div>
-  <div class="mp-row">
-    <div class="mp-col-2">
-      <mat-slide-toggle>Vigente</mat-slide-toggle>
-    </div>
-    <div class="mp-col-2">
-      <mat-slide-toggle>Aprovados</mat-slide-toggle>
-    </div>
-    <div class="mp-col-4">
+    <div class="mp-col-3">
       <mat-form-field>
-        <mat-select placeholder="Cidade" [(value)]="selected" required>
-          <mat-option>Selecione uma cidade</mat-option>
-          <mat-option value="option1">Option 1</mat-option>
-          <mat-option value="option2">Option 2</mat-option>
-          <mat-option value="option3">Option 3</mat-option>
-        </mat-select>
+        <input matInput placeholder="Destinatário" type="text">
       </mat-form-field>
     </div>
-    <div class="mp-col-4">
-      <mat-form-field>
-        <mat-select placeholder="Bairro" [(value)]="selected" required>
-          <mat-option>Selecione uma bairro</mat-option>
-          <mat-option value="option1">Option 1</mat-option>
-          <mat-option value="option2">Option 2</mat-option>
-          <mat-option value="option3">Option 3</mat-option>
-        </mat-select>
-      </mat-form-field>
+    <div class="mp-col-2">
+      <button mat-mini-fab color="success">
+        <i class="icon icon-consulta"></i>
+      </button>
+      <button mat-mini-fab color="clean">
+          <i class="icon icon-borracha"></i>
+        </button>
+        <button mat-mini-fab color="primary">
+            <i class="icon icon-novo"></i>
+          </button>
+        <button mat-mini-fab color="basic">
+          <i class="icon icon-chevron-baixo"></i>
+        </button>
+        
     </div>
   </div>
-  <div class="mp-row">
-    <div class="mp-col-12">
-      <button routerLink="/criar-caso" mat-raised-button color="">
-        <mat-icon>
-          plus_one
-        </mat-icon>
-        Criar caso
-      </button>
-      <button mat-raised-button color="success">
-        <mat-icon>
-          search
-        </mat-icon>
-        Buscar caso
-      </button>
+  <div class="mp-row mp-row-expand">
+    <div class="mp-col-4">
+        <mat-form-field>
+            <mat-label>Estado</mat-label>
+            <mat-select [(value)]="selected4">
+              <mat-option>None</mat-option>
+              <mat-option value="option1">Option 1</mat-option>
+              <mat-option value="option2">Option 2</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div class="mp-col-4">
+        <mat-form-field>
+            <mat-label>Cidade</mat-label>
+            <mat-select [(value)]="selected4">
+              <mat-option>None</mat-option>
+              <mat-option value="option1">Option 1</mat-option>
+              <mat-option value="option2">Option 2</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div class="mp-col-4">
+        <mat-form-field>
+            <mat-label>Bairro</mat-label>
+            <mat-select [(value)]="selected4">
+              <mat-option>None</mat-option>
+              <mat-option value="option1">Option 1</mat-option>
+              <mat-option value="option2">Option 2</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+  </div>
+  <div class="mp-row mp-row-expand">
+    <div class="mp-col-3">
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker4" placeholder="Data início vigência">
+            <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+            <mat-datepicker #picker4></mat-datepicker>
+          </mat-form-field>
+    </div>
+    <div class="mp-col-3">
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker5" placeholder="Data fim vigência">
+            <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+            <mat-datepicker #picker5></mat-datepicker>
+          </mat-form-field>
+    </div>
+    <div class="mp-col-6">
+        <mat-form-field >
+            <mat-chip-list #chipList>
+              <mat-chip *ngFor="let caso of caso" [selectable]="selectable"
+                       [removable]="removable" (removed)="remove(caso)">
+                {{caso.name}}
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+              </mat-chip>
+              <input placeholder="Situação do caso"
+                     [matChipInputFor]="chipList"
+                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                     [matChipInputAddOnBlur]="addOnBlur"
+                     (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+          </mat-form-field>
     </div>
   </div>
   <div class="mp-row">
@@ -100,31 +142,36 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button  matTooltip="Publicar" mat-mini-fab color="basic">
-          <mat-icon>
-            publish
-          </mat-icon>
+        <button  (click)="openDialog()" matTooltip="Publicar" mat-mini-fab color="basic">
+          <i class="icon icon-publicar"></i>
         </button>
         <button  matTooltip="Aprovar" mat-mini-fab color="basic">
-          <mat-icon>
-            spellcheck
-          </mat-icon>
+          <i class="icon icon-documento-ativar"></i>
         </button>
         <button  matTooltip="Promover" mat-mini-fab color="basic">
-          <mat-icon>
-            star_rate
-          </mat-icon>
+          <i class="icon icon-star"></i>
         </button>
         <button routerLink="/detalhar-caso" matTooltip="Detalhar" mat-mini-fab color="basic">
-          <mat-icon>
-            find_in_page
-          </mat-icon>
+          <i class="icon icon-busca-documento"></i>
         </button>
         <button routerLink="/editar-caso"  matTooltip="Editar" mat-mini-fab color="basic">
-          <mat-icon>
-            create
-          </mat-icon>
+          <i class="icon icon-editar"></i>
         </button>
+        <button routerLink=""  matTooltip="Submeter a aprovação" mat-mini-fab color="basic">
+          <i class="icon icon-arquivo-exportar"></i>
+        </button>
+        <button routerLink=""  matTooltip="Delete" mat-mini-fab color="basic">
+            <i class="icon icon-deletar"></i>
+          </button>
+          <button routerLink=""  matTooltip="Desaprovar" mat-mini-fab color="basic">
+              <i class="icon icon-reload"></i>
+            </button>
+            <button routerLink=""  matTooltip="Encerrar" mat-mini-fab color="basic">
+                <i class="icon icon-judicial"></i>
+              </button>
+              <button routerLink=""  matTooltip="Despublicar" mat-mini-fab color="basic">
+                  <i class="icon icon-cancelar"></i>
+                </button>
       </mat-card-actions>
     </mat-card>
     </div>
@@ -141,31 +188,36 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button  matTooltip="Publicar" mat-mini-fab color="basic">
-          <mat-icon>
-            publish
-          </mat-icon>
-        </button>
-        <button  matTooltip="Aprovar" mat-mini-fab color="basic">
-          <mat-icon>
-            spellcheck
-          </mat-icon>
-        </button>
-        <button  matTooltip="Promover" mat-mini-fab color="basic">
-          <mat-icon>
-            star_rate
-          </mat-icon>
-        </button>
-        <button routerLink="/detalhar-caso"  matTooltip="Detalhar" mat-mini-fab color="basic">
-          <mat-icon>
-            find_in_page
-          </mat-icon>
-        </button>
-        <button  matTooltip="Editar" mat-mini-fab color="basic">
-          <mat-icon>
-            create
-          </mat-icon>
-        </button>
+          <button  (click)="openDialog()" matTooltip="Publicar" mat-mini-fab color="basic">
+              <i class="icon icon-publicar"></i>
+            </button>
+            <button  matTooltip="Aprovar" mat-mini-fab color="basic">
+              <i class="icon icon-documento-ativar"></i>
+            </button>
+            <button  matTooltip="Promover" mat-mini-fab color="basic">
+              <i class="icon icon-star"></i>
+            </button>
+            <button routerLink="/detalhar-caso" matTooltip="Detalhar" mat-mini-fab color="basic">
+              <i class="icon icon-busca-documento"></i>
+            </button>
+            <button routerLink="/editar-caso"  matTooltip="Editar" mat-mini-fab color="basic">
+              <i class="icon icon-editar"></i>
+            </button>
+            <button routerLink=""  matTooltip="Submeter a aprovação" mat-mini-fab color="basic">
+              <i class="icon icon-arquivo-exportar"></i>
+            </button>
+            <button routerLink=""  matTooltip="Delete" mat-mini-fab color="basic">
+                <i class="icon icon-deletar"></i>
+              </button>
+              <button routerLink=""  matTooltip="Desaprovar" mat-mini-fab color="basic">
+                  <i class="icon icon-reload"></i>
+                </button>
+                <button routerLink=""  matTooltip="Encerrar" mat-mini-fab color="basic">
+                    <i class="icon icon-judicial"></i>
+                  </button>
+                  <button routerLink=""  matTooltip="Despublicar" mat-mini-fab color="basic">
+                      <i class="icon icon-cancelar"></i>
+                    </button>
       </mat-card-actions>
     </mat-card>
     </div>
@@ -182,31 +234,36 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button  matTooltip="Publicar" mat-mini-fab color="basic">
-          <mat-icon>
-            publish
-          </mat-icon>
-        </button>
-        <button  matTooltip="Aprovar" mat-mini-fab color="basic">
-          <mat-icon>
-            spellcheck
-          </mat-icon>
-        </button>
-        <button  matTooltip="Promover" mat-mini-fab color="basic">
-          <mat-icon>
-            star_rate
-          </mat-icon>
-        </button>
-        <button routerLink="/detalhar-caso" matTooltip="Detalhar" mat-mini-fab color="basic">
-          <mat-icon>
-            find_in_page
-          </mat-icon>
-        </button>
-        <button  matTooltip="Editar" mat-mini-fab color="basic">
-          <mat-icon>
-            create
-          </mat-icon>
-        </button>
+          <button  (click)="openDialog()" matTooltip="Publicar" mat-mini-fab color="basic">
+              <i class="icon icon-publicar"></i>
+            </button>
+            <button  matTooltip="Aprovar" mat-mini-fab color="basic">
+              <i class="icon icon-documento-ativar"></i>
+            </button>
+            <button  matTooltip="Promover" mat-mini-fab color="basic">
+              <i class="icon icon-star"></i>
+            </button>
+            <button routerLink="/detalhar-caso" matTooltip="Detalhar" mat-mini-fab color="basic">
+              <i class="icon icon-busca-documento"></i>
+            </button>
+            <button routerLink="/editar-caso"  matTooltip="Editar" mat-mini-fab color="basic">
+              <i class="icon icon-editar"></i>
+            </button>
+            <button routerLink=""  matTooltip="Submeter a aprovação" mat-mini-fab color="basic">
+              <i class="icon icon-arquivo-exportar"></i>
+            </button>
+            <button routerLink=""  matTooltip="Delete" mat-mini-fab color="basic">
+                <i class="icon icon-deletar"></i>
+              </button>
+              <button routerLink=""  matTooltip="Desaprovar" mat-mini-fab color="basic">
+                  <i class="icon icon-reload"></i>
+                </button>
+                <button routerLink=""  matTooltip="Encerrar" mat-mini-fab color="basic">
+                    <i class="icon icon-judicial"></i>
+                  </button>
+                  <button routerLink=""  matTooltip="Despublicar" mat-mini-fab color="basic">
+                      <i class="icon icon-cancelar"></i>
+                    </button>
       </mat-card-actions>
     </mat-card>
     </div>

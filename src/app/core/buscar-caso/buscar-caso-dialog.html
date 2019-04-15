@@ -1,0 +1,146 @@
+<h3 mat-dialog-title>
+  Agressão a namorada no rograma da Rede Globo, Big Brother 20
+</h3>
+<div mat-dialog-content>
+  <div class="mp-row">
+    <div class="mp-col-12">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolores, pariatur possimus corrupti ipsum ducimus tempore a, similique consectetur necessitatibus, aspernatur error delectus asperiores et nesciunt ab provident libero molestiae?
+        </p>
+        <mat-chip-list>
+        <mat-chip>
+          Copacabana
+        </mat-chip>
+        <mat-chip>
+          Rio de Janeiro
+        </mat-chip>
+        <mat-chip matTooltip="Data início Vigência">
+          02/03/2019
+        </mat-chip>
+        <mat-chip color="primary" selected>
+          Comunicações com o caso
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+  <div class="mp-row">
+    <div class="mp-col-12">
+        <table class="tabela-basica">
+          <thead>
+            <tr>
+              <td>
+                Área(Atribuição)
+              </td>
+              <td>
+                Tema
+              </td>
+              <td>
+                Destinatário
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Investigação Penal
+              </td>
+              <td>
+                CP. ART. 146/AMEAÇA OU CONSTRANGIMENTO ILEGAL
+              </td>
+              <td>
+                2 CENTRAL DE INQUÉRITOS - NÚCLEO NITERÓI
+              </td>
+            </tr>
+            <tr>
+                <td>
+                  Investigação Penal
+                </td>
+                <td>
+                  CP. ART. 146/AMEAÇA OU CONSTRANGIMENTO ILEGAL
+                </td>
+                <td>
+                  2 CENTRAL DE INQUÉRITOS - NÚCLEO NITERÓI
+                </td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+  <div class="mp-row">
+    <div class="mp-col-12">
+      <h3>
+        Notícias Relacionadas
+      </h3>
+      <mat-list role="list">
+          <mat-list-item role="listitem">
+            <a mat-icon-button href="">
+              <i class="icon icon-consulta"></i>
+            </a>
+            MPRJ oferece recurso para que ex-BBB responda por crime de violência doméstica.
+          </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+  <div class="mp-row">
+    <div class="mp-col-12">
+      <h3>
+        Anexos
+      </h3>
+      <mat-list role="list">
+          <mat-list-item role="listitem">
+            <a mat-icon-button href="">
+              <i class="icon icon-consulta"></i>
+            </a>
+            Foto_suspeito.jpg
+          </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+  <div class="mp-row">
+    <div class="mp-col-12">
+      <h3>
+        Tags
+      </h3>
+      <mat-chip-list>
+        <mat-chip>
+          tag_1
+        </mat-chip>
+        <mat-chip>
+            tag_2
+          </mat-chip>
+          <mat-chip>
+              tag_3
+            </mat-chip>
+      </mat-chip-list>
+    </div>
+  </div>
+  <div class="mp-row">
+    <div class="mp-col-4">
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Data fim vigência">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+    <div class="mp-col-4">
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker2" placeholder="Data da publicacao">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+    <div class="mp-col-4">
+        <mat-slide-toggle>Apresenta número de adesões no portal</mat-slide-toggle>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="success" >
+    <i class="icon icon-publicar"></i>
+    Publicar
+  </button>
+  <button mat-raised-button >
+    <i class="icon icon-editar"></i>
+    Editar
+  </button>
+</div>

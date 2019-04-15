@@ -7,14 +7,16 @@ import { BuscarCasoComponent } from './core/buscar-caso/buscar-caso.component';
 import { CriarCasoComponent } from './core/criar-caso/criar-caso.component';
 import { DetalharCasoComponent } from './core/detalhar-caso/detalhar-caso.component';
 import { EditarCasoComponent } from './core/editar-caso/editar-caso.component';
+import { CadastroTagComponent } from './core/cadastro-tag/cadastro-tag.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'buscar-caso', component: BuscarCasoComponent },
-  { path: 'criar-caso', component: CriarCasoComponent },
+  { path: 'cadastrar-caso', component: CriarCasoComponent },
   { path: 'detalhar-caso', component: DetalharCasoComponent },
   { path: 'editar-caso', component: EditarCasoComponent },
+  { path: 'cadastrar-tag', component: CadastroTagComponent },
   { path: '**', redirectTo: '' }
 ];
 

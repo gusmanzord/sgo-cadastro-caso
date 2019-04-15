@@ -1,8 +1,6 @@
 <div class="mp-header">
-   <mat-icon>
-      plus_one
-  </mat-icon>
-    Criar Caso
+   <i class="icon icon-novo-despacho"></i>
+    Cadastrar Caso
     <ul class="breadcrumb">
     <li>
       <a href="">
@@ -10,7 +8,7 @@
       </a>
     </li>
     <li>
-      Criar Caso
+      Cadastrar Caso
     </li>
   </ul>
 </div>
@@ -47,14 +45,14 @@
             </div>
             <div class="mp-col-2">
               <mat-form-field>
-                <input matInput [matDatepicker]="picker" placeholder="Data início">
+                <input matInput [matDatepicker]="picker" placeholder="Data início vigência">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
               </mat-form-field>
             </div>
             <div class="mp-col-2">
               <mat-form-field>
-                <input matInput [matDatepicker]="picker2" placeholder="Data Fim">
+                <input matInput [matDatepicker]="picker2" placeholder="Data Fim vigência">
                 <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                 <mat-datepicker #picker2></mat-datepicker>
               </mat-form-field>
@@ -67,9 +65,6 @@
                 </mat-form-field>
             </div>
           </div>
-         
-          
-
         </mat-tab>
         <mat-tab label="Notícias relacionadas">
           <div class="mp-row">
@@ -88,31 +83,35 @@
           </div>
           <div class="mp-row">
             <div class="mp-col-12">
-              <mat-chip-list class="news">
-                <mat-chip>www.globo.com
-                  <button mat-icon-button>
-                    <mat-icon>
-                      close
-                    </mat-icon>
-                  </button>
-                </mat-chip>
-                <mat-chip>
-                  www.ofluminense.com.br
-                  <button mat-icon-button>
-                    <mat-icon>
-                      close
-                    </mat-icon>
-                  </button>
-                </mat-chip>
-                <mat-chip>
-                  www.odia.com.br
-                  <button mat-icon-button>
-                    <mat-icon>
-                      close
-                    </mat-icon>
-                  </button>
-                </mat-chip>
-              </mat-chip-list>
+              <mat-card>
+                <mat-card-content>
+                    <mat-chip-list class="news">
+                        <mat-chip>www.globo.com
+                          <button mat-icon-button>
+                            <mat-icon>
+                              close
+                            </mat-icon>
+                          </button>
+                        </mat-chip>
+                        <mat-chip>
+                          www.ofluminense.com.br
+                          <button mat-icon-button>
+                            <mat-icon>
+                              close
+                            </mat-icon>
+                          </button>
+                        </mat-chip>
+                        <mat-chip>
+                          www.odia.com.br
+                          <button mat-icon-button>
+                            <mat-icon>
+                              close
+                            </mat-icon>
+                          </button>
+                        </mat-chip>
+                      </mat-chip-list>
+                </mat-card-content>
+              </mat-card>
             </div>
           </div>
         </mat-tab>
@@ -162,6 +161,26 @@
                    
                 </div>
               </div>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Tags">
+          <div class="mp-row">
+            <div class="mp-col-4">
+                <mat-form-field>
+                    <mat-label>Adicionar tag</mat-label>
+                    <mat-select [(value)]="selected">
+                      <mat-option>None</mat-option>
+                      <mat-option value="option1">Option 1</mat-option>
+                      <mat-option value="option2">Option 2</mat-option>
+                      <mat-option value="option3">Option 3</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="mp-col-1">
+              <button mat-mini-fab  color="success">
+                <i class="icon icon-novo"></i>
+              </button>
             </div>
           </div>
         </mat-tab>

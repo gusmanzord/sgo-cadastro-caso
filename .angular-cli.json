@@ -19,6 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "styles.css",
+        "assets/css/mp-icons.css",
         "assets/css/mp-main.css",
         "assets/css/mp-login.css",
         "assets/css/menu.css",
@@ -59,5 +61,6 @@
   "defaults": {
     "styleExt": "css",
     "component": {}
+    
   }
 }

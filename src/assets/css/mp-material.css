@@ -24,9 +24,8 @@ mat-sidenav-content::-webkit-scrollbar-thumb{
   outline: 1px solid slategrey;
 }
 .mat-toolbar{
-    background:rgba(207,216,220, 0.9) !important;
-    position:fixed;
-    z-index:999;
+    flex:1;
+    background: none !important; 
 }
 .mat-drawer{
     display:flex !important;
@@ -80,4 +79,14 @@ mat-sidenav-content::-webkit-scrollbar-thumb{
 }
 .author .mat-chip, .news .mat-chip{
     padding: 0 14px !important;
+}
+input.mat-chip-input{
+    margin: 0 !important;
+}
+.mat-drawer-content{
+    display: flex;
+}
+
+.mat-drawer-container{
+    background: transparent;
 }
