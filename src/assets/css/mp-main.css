@@ -20,11 +20,29 @@ main{
     overflow-x:none !important;
     background:#cfd8dc;
 }
+logo{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    background:rgba(0, 0, 0, 0.2);
+}
+logo i{
+    flex:1;
+    font-size: 10em !important;
+    color:#fafafa;
+    margin: auto;
+}
+logo p{
+    margin: auto;
+    color:#fafafa;
+    min-height: 30px;
+}
 app-name{
     flex:1;
     background:rgba(0, 0, 0, 0.2);
     max-height: 100px;
 }
+
 app-name h2{
     margin:auto;
     padding:5px;
@@ -34,7 +52,9 @@ app-name h2{
     font-weight:100 !important;
     color:#fff;
     background: -webkit-linear-gradient(#cfd8dc, rgba(65,67,84, 1.0));
+    background-clip: text;
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
 }
 app-name h2 small{

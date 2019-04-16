@@ -115,52 +115,54 @@
             </div>
           </div>
         </mat-tab>
+        
         <mat-tab label="Classificação">
           <div class="mp-row">
-            <div class="mp-col-6">
-              <div class="mp-row">
-                <div class="mp-col-12">
+            <div class="mp-col-4">
                   <mat-form-field>
-                    <mat-select [(ngModel)]="selectedValueAssignment" placeholder="Atribuição" [formControl]="assignment" multiple>
+                    <mat-select [(ngModel)]="selectedValueAssignment" placeholder="Atribuição" [formControl]="assignment" >
                       <mat-option *ngFor="let assignment of assignmentList" [value]="assignment">{{assignment}}</mat-option>
                     </mat-select>
                   </mat-form-field>
-                </div>
-              </div>
-              <div class="mp-row">
-                <div class="mp-col-12">
-                  <mat-card>
-                    <mat-card-content>
-                      <p>
-                        {{selectedValueAssignment}}
-                      </p>
-                    </mat-card-content>
-                  </mat-card>
-                </div>
-              </div>
             </div>
-            <div class="mp-col-6">
-              <div class="mp-row">
-                <div class="mp-col-12">
+            <div class="mp-col-3">
                   <mat-form-field>
-                    <mat-select [(ngModel)]="selectedValueTheme" placeholder="Tema" [formControl]="theme" multiple>
+                    <mat-select [(ngModel)]="selectedValueTheme" placeholder="Tema" [formControl]="theme">
                       <mat-option *ngFor="let theme of themeList" [value]="theme">{{theme}}</mat-option>
                     </mat-select>
                   </mat-form-field>
-                </div>
-              </div>
-              <div class="mp-row">
-                <div class="mp-col-12">
-                  <mat-card>
-                    <mat-card-content>
-                      <p>
+            </div>
+            <div class="mp-col-4">
+                <mat-form-field>
+                    <mat-select [(ngModel)]="selectedValueDestiny" placeholder="Destinatario" [formControl]="destiny">
+                      <mat-option *ngFor="let destiny of destinyList" [value]="destiny">{{destiny}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="mp-col-1">
+              <button mat-mini-fab color="success">
+                  <i class="icon icon-novo"></i>
+              </button>
+            </div>
+          </div>
+          <div class="mp-row">
+            <div class="mp-col-12">
+              <mat-card>
+                <mat-card-title>
+                  Classificações Selecionadas
+                </mat-card-title>
+                <mat-card-content>
+                  <mat-chip-list>
+                    <mat-chip>
+                        {{selectedValueAssignment}}
                         {{selectedValueTheme}}
-                      </p>
-                    </mat-card-content>
-                  </mat-card>
-                   
-                </div>
-              </div>
+                        {{selectedValueDestiny}}
+                        
+                    </mat-chip>
+                  </mat-chip-list>
+                    
+                </mat-card-content>
+              </mat-card>
             </div>
           </div>
         </mat-tab>
@@ -184,7 +186,7 @@
             </div>
           </div>
         </mat-tab>
-        <mat-tab label="Autor do fato">
+        <mat-tab label="Comunicações">
           <div class="mp-row">
             <div class="mp-col-11">
               <mat-form-field>
@@ -201,16 +203,50 @@
           </div>
           <div class="mp-row">
             <div class="mp-col-12">
-              <mat-chip-list class="author">
-                <mat-chip>
-                  João Jose da Silva Xavier
-                  <button mat-icon-button>
-                    <mat-icon>
-                      close
-                    </mat-icon>
-                  </button>
-                </mat-chip>
-              </mat-chip-list>
+              <mat-card>
+                <mat-card-content>
+                  <mat-chip-list class="author">
+                    <mat-chip>
+                      João Jose da Silva Xavier
+                      <button mat-icon-button>
+                        <mat-icon>
+                          close
+                        </mat-icon>
+                      </button>
+                    </mat-chip>
+                  </mat-chip-list>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Anexos">
+          <div class="mp-row">
+            <div class="mp-col-11">
+              <mat-form-field>
+                <input matInput placeholder="Adicionar anexos" type="text">
+              </mat-form-field>
+            </div>
+            <div class="mp-col-1">
+              <button mat-mini-fab color="basic">
+                <i class="icon icon-novo"></i>
+              </button>
+            </div>
+          </div>
+          <div class="mp-row">
+            <div class="mp-col-12">
+              <mat-card>
+                <mat-card-content>
+                    <mat-chip-list>
+                        <mat-chip>
+                            Processo 0978904­78­2018­8­19­7543.PDF
+                        </mat-chip>
+                        <mat-chip>
+                            Foto suspeito.JPG
+                        </mat-chip>
+                      </mat-chip-list>
+                </mat-card-content>
+              </mat-card>
             </div>
           </div>
         </mat-tab>
@@ -220,23 +256,21 @@
    <div class="mp-row">
     <div class="mp-col-12">
     <button routerLink="/buscar-caso" mat-raised-button color="cancel">
-      <mat-icon>
-        cancel
-      </mat-icon>
+      <i class="icon icon-cancelar"></i>
       cancelar
     </button>
     <button mat-raised-button color="clean">
-      <mat-icon>
-        close
-      </mat-icon>
+      <i class="icon icon-borracha"></i>
       limpar
     </button>
     <button mat-raised-button color="success" disabled>
-      <mat-icon>
-        save
-      </mat-icon>
+     <i class="icon icon-salvar-nuvem"></i>  
       Salvar
     </button>
+    <button mat-raised-button color="success" >
+        <i class="icon icon-check-circulo"></i>
+        Submeter aprovação
+      </button>
     </div>
     </div>
 </div>

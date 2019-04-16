@@ -1,6 +1,7 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
     <app-name></app-name>
+    <logo></logo>
     <app-menu></app-menu>      
   </mat-sidenav>
   <mat-sidenav-content>
@@ -9,7 +10,6 @@
         <button mat-icon-button (click)="sidenav.toggle()">
           <i class="icon icon-menu"></i>
         </button>
-        <app-logo></app-logo>
         <span class="spacer"></span>
         <app-perfil></app-perfil>
       </mat-toolbar-row>

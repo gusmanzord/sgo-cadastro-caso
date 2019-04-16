@@ -13,7 +13,6 @@
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icon' !important;
     font-size:1.8em;
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -34,11 +33,14 @@
   .icon-novo-despacho:before {
     content: "\e967";
   }
-  .icon-publicar:before {
-    content: "\e96a";
+  .icon-logo-sgo:before {
+    content: "\e96b";
   }
   .icon-cadastrar-tag:before {
     content: "\e969";
+  }
+  .icon-publicar:before {
+    content: "\e96a";
   }
   .icon-salvar-nuvem:before {
     content: "\e965";
@@ -355,6 +357,7 @@
   .icon-marcar-ferias:before {
     content: "\e90f";
   }
+  
   
   
   
