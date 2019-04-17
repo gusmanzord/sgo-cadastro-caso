@@ -228,7 +228,7 @@
               </mat-form-field>
             </div>
             <div class="mp-col-1">
-              <button mat-mini-fab color="basic">
+              <button mat-mini-fab color="success">
                 <i class="icon icon-novo"></i>
               </button>
             </div>
@@ -236,15 +236,20 @@
           <div class="mp-row">
             <div class="mp-col-12">
               <mat-card>
+                <mat-card-title>
+                  Anexos
+                </mat-card-title>
                 <mat-card-content>
-                    <mat-chip-list>
-                        <mat-chip>
-                            Processo 0978904­78­2018­8­19­7543.PDF
-                        </mat-chip>
-                        <mat-chip>
-                            Foto suspeito.JPG
-                        </mat-chip>
-                      </mat-chip-list>
+                  <mat-list>
+                    <mat-list-item>
+                        <i mat-list-icon class="icon icon-exportar"></i>
+                        Processo 0978904­78­2018­8­19­7543.PDF
+                    </mat-list-item>
+                    <mat-list-item>
+                        <i mat-list-icon class="icon icon-exportar"></i>
+                        Foto suspeito.JPG
+                    </mat-list-item>
+                  </mat-list>
                 </mat-card-content>
               </mat-card>
             </div>
@@ -262,10 +267,6 @@
     <button mat-raised-button color="clean">
       <i class="icon icon-borracha"></i>
       limpar
-    </button>
-    <button mat-raised-button color="success" disabled>
-     <i class="icon icon-salvar-nuvem"></i>  
-      Salvar
     </button>
     <button mat-raised-button color="success" >
         <i class="icon icon-check-circulo"></i>

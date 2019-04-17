@@ -188,9 +188,21 @@ h1{
     background:#3949ab !important;
     color:#fafafa;
 }
+.mat-card-approved, .mp-status-most-approved{
+    background:#a5d6a7 !important;
+    color:#43a047;
+}
+.mat-card-approved, .mp-status-pendency{
+    background:#d32f2f !important;
+    color:#fafafa;   
+}
 .mat-card-approved, .mp-status-approved{
     background:#43a047 !important;
     color:#fafafa;
+}
+.mp-status-locked-up{
+    background:#fdd835 !important;
+    color:#f57f17;
 }
 /* Fontes */
 .fs3{

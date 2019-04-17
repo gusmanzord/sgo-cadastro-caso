@@ -13,6 +13,7 @@
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icon' !important;
     font-size:1.8em;
+    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -32,6 +33,9 @@
   }
   .icon-novo-despacho:before {
     content: "\e967";
+  }
+  .icon-arquivo-pendencia:before {
+    content: "\e96c";
   }
   .icon-logo-sgo:before {
     content: "\e96b";
