@@ -1,0 +1,154 @@
+<h3 mat-dialog-title>
+        Agressão a namorada no rograma da Rede Globo, Big Brother 20
+      </h3>
+      <div mat-dialog-content>
+        <div class="mp-row">
+          <div class="mp-col-12">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolores, pariatur possimus corrupti ipsum ducimus tempore a, similique consectetur necessitatibus, aspernatur error delectus asperiores et nesciunt ab provident libero molestiae?
+              </p>
+              <mat-chip-list>
+              <mat-chip>
+                Copacabana
+              </mat-chip>
+              <mat-chip>
+                Rio de Janeiro
+              </mat-chip>
+              <mat-chip matTooltip="Data início Vigência">
+                02/03/2019
+              </mat-chip>
+              <mat-chip color="primary" selected>
+                Comunicações com o caso
+              </mat-chip>
+            </mat-chip-list>
+          </div>
+        </div>
+        <div class="mp-row">
+          <div class="mp-col-12">
+              <table class="tabela-basica">
+                <thead>
+                  <tr>
+                    <td>
+                      Área(Atribuição)
+                    </td>
+                    <td>
+                      Tema
+                    </td>
+                    <td>
+                      Destinatário
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Investigação Penal
+                    </td>
+                    <td>
+                      CP. ART. 146/AMEAÇA OU CONSTRANGIMENTO ILEGAL
+                    </td>
+                    <td>
+                      2 CENTRAL DE INQUÉRITOS - NÚCLEO NITERÓI
+                    </td>
+                  </tr>
+                  <tr>
+                      <td>
+                        Investigação Penal
+                      </td>
+                      <td>
+                        CP. ART. 146/AMEAÇA OU CONSTRANGIMENTO ILEGAL
+                      </td>
+                      <td>
+                        2 CENTRAL DE INQUÉRITOS - NÚCLEO NITERÓI
+                      </td>
+                    </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="mp-row">
+          <div class="mp-col-12">
+            <h3>
+              Notícias Relacionadas
+            </h3>
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <a mat-icon-button href="">
+                    <i class="icon icon-consulta"></i>
+                  </a>
+                  MPRJ oferece recurso para que ex-BBB responda por crime de violência doméstica.
+                </mat-list-item>
+            </mat-list>
+          </div>
+        </div>
+        <div class="mp-row">
+          <div class="mp-col-12">
+            <h3>
+              Anexos
+            </h3>
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <a mat-icon-button href="">
+                    <i class="icon icon-consulta"></i>
+                  </a>
+                  Foto_suspeito.jpg
+                </mat-list-item>
+            </mat-list>
+          </div>
+        </div>
+        <div class="mp-row">
+          <div class="mp-col-12">
+            <h3>
+              Tags
+            </h3>
+            <mat-chip-list>
+              <mat-chip>
+                tag_1
+              </mat-chip>
+              <mat-chip>
+                  tag_2
+                </mat-chip>
+                <mat-chip>
+                    tag_3
+                  </mat-chip>
+            </mat-chip-list>
+          </div>
+        </div>
+        <div class="mp-row">
+            <div class="mp-col-2">
+                <mat-form-field>
+                    <input matInput value="04/03/2019" placeholder="Data da publicação" type="text" disabled>
+                </mat-form-field>
+            </div>
+          <div class="mp-col-2">
+                <mat-form-field>
+                    <mat-label>Posição no ranking</mat-label>
+                    <mat-select #fontSize value="1px" (selectionChange)="triggerResize()">
+                    <mat-option value="10px">10px</mat-option>
+                    <mat-option value="12px">12px</mat-option>
+                    <mat-option value="14px">14px</mat-option>
+                    <mat-option value="16px">16px</mat-option>
+                    <mat-option value="18px">18px</mat-option>
+                    <mat-option value="20px">20px</mat-option>
+                </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="mp-col-4">
+              <mat-form-field>
+                  <input matInput [matDatepicker]="picker3" placeholder="Mantém esta posição no ranking até">
+                  <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                  <mat-datepicker #picker3></mat-datepicker>
+                </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div mat-dialog-actions>
+        <button mat-raised-button color="success" >
+          <i class="icon icon-star"></i>
+          Promover
+        </button>
+        <button mat-raised-button >
+          <i class="icon icon-editar"></i>
+          Editar
+        </button>
+      </div>

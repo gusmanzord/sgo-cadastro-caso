@@ -6,7 +6,7 @@ import { DetalharCasoComponent } from './detalhar-caso/detalhar-caso.component';
 import { EditarCasoComponent } from './editar-caso/editar-caso.component';
 import { CadastroTagComponent } from './cadastro-tag/cadastro-tag.component';
 import { BuscarCasoDialog } from './buscar-caso/buscar-caso.component';
-
+import { BuscarCasoPromoverDialog } from './buscar-caso/buscar-caso.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { BuscarCasoDialog } from './buscar-caso/buscar-caso.component';
   DetalharCasoComponent,
   EditarCasoComponent,
   CadastroTagComponent,
-  BuscarCasoDialog
+  BuscarCasoDialog,
+  BuscarCasoPromoverDialog
   
 ],
 
@@ -26,7 +27,7 @@ import { BuscarCasoDialog } from './buscar-caso/buscar-caso.component';
     RouterModule,
     MaterialModule,
   ],
-  entryComponents:[BuscarCasoDialog],
+  entryComponents:[BuscarCasoDialog, BuscarCasoPromoverDialog],
   providers: []
 })
 export class CoreModule {}

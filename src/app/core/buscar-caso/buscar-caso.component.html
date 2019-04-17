@@ -142,13 +142,13 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button  (click)="openDialog()" matTooltip="Publicar" mat-mini-fab color="basic">
+        <button  (click)="openDialogPublicar()" matTooltip="Publicar" mat-mini-fab color="basic">
           <i class="icon icon-publicar"></i>
         </button>
         <button  matTooltip="Aprovar" mat-mini-fab color="basic">
           <i class="icon icon-documento-ativar"></i>
         </button>
-        <button  matTooltip="Promover" mat-mini-fab color="basic">
+        <button (click)="openDialogPromover()" matTooltip="Promover" mat-mini-fab color="basic">
           <i class="icon icon-star"></i>
         </button>
         <button routerLink="/detalhar-caso" matTooltip="Detalhar" mat-mini-fab color="basic">

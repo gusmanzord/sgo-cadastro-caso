@@ -54,12 +54,23 @@ export class BuscarCasoComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {}
 
-  openDialog(): void {
+  openDialogPublicar(): void {
     const dialogRef = this.dialog.open(BuscarCasoDialog, {
       width: '75%',
       
     });
-
+    
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+  openDialogPromover(): void {
+    const dialogRef = this.dialog.open(BuscarCasoPromoverDialog, {
+      width: '75%',
+      
+    });
+    
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       this.animal = result;
@@ -76,6 +87,22 @@ export class BuscarCasoDialog {
 
   constructor(
     public dialogRef: MatDialogRef<BuscarCasoDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+}
+
+@Component({
+  selector: 'buscar-caso-promover-dialog',
+  templateUrl: 'buscar-caso-promover-dialog.html',
+})
+export class BuscarCasoPromoverDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef<BuscarCasoPromoverDialog>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   onNoClick(): void {
